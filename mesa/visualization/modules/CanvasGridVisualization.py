@@ -90,5 +90,5 @@ class CanvasGrid(VisualizationElement):
                         portrayal["x"] = x
                         portrayal["y"] = y
                         grid_state[portrayal["Layer"]].append(portrayal)
-
+        print(grid_state[0][0])
         return grid_state
