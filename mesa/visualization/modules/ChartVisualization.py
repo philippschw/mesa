@@ -1,18 +1,13 @@
-# -*- coding: utf-8 -*-
-"""
-Chart Module
-============
-
-Module for drawing live-updating line charts using Charts.js
-
-"""
 import json
 from mesa.visualization.ModularVisualization import VisualizationElement
 
 
 class ChartModule(VisualizationElement):
-    """ Each chart can visualize one or more model-level series as lines
-     with the data value on the Y axis and the step number as the X axis.
+    '''
+    Module for drawing live-updating line charts using Charts.js
+
+    Each chart can visualize one or more model-level series as lines with the
+    data value on the Y axis and the step number as the X axis.
 
     At the moment, each call to the render method returns a list of the most
     recent values of each series.
@@ -40,8 +35,8 @@ class ChartModule(VisualizationElement):
         More Pythonic customization; in particular, have both series-level and
         chart-level options settable in Python, and passed to the front-end
         the same way that "Color" is currently.
+    '''
 
-    """
     package_includes = ["Chart.min.js", "ChartModule.js"]
     series = []
     canvas_width = 500
@@ -50,7 +45,7 @@ class ChartModule(VisualizationElement):
 
     def __init__(self, series, canvas_height=200, canvas_width=500,
                  data_collector_name="datacollector"):
-        """
+        '''
         Create a new line chart visualization.
 
         Args:
@@ -59,7 +54,7 @@ class ChartModule(VisualizationElement):
                     [{"Label": "happy", "Color": "Black"},]
             canvas_height, canvas_width: Size in pixels of the chart to draw.
             data_collector_name: Name of the DataCollector to use.
-        """
+        '''
 
         self.series = series
         self.canvas_height = canvas_height
