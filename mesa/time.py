@@ -98,13 +98,10 @@ class BaseScheduler(object):
         '''
         Returns the list of agents on schedule
         '''
-        print "test"
         return self.agents
 
     def return_specific_agent(self, name):
-        print name
         agent = [x for x in self.agents if x.agent_name == name]
-        print agent
         return self.agents[agent]
 
 class RandomActivation(BaseScheduler): #Rewritten so that Both synchronous and asynchronous agent activation is possible
